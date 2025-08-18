@@ -41,8 +41,23 @@ app.get('/', (req, res) => {
   `);
 });
 
+//Rota dos bruxos
 app.get("/bruxos", (req, res) => {
     res.json(bruxos);
+});
+
+app.get("/bruxos/:id", (req, res) =>{
+  let id = req.params.id;
+  id = parseInt(id);
+  const bruxo = bruxos.find(b => b.id === id);
+  console.log(bruxo);
+
+  if(bruxo){
+    res.status(200).json(bruxo)
+  }else{
+    res.status(404).json({
+    mensagem: "Bruxo não encontrado"});
+  }
 });
 
 // Rota das casas
