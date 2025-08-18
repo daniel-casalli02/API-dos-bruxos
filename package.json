@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "Daniel",
   "license": "MIT",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
