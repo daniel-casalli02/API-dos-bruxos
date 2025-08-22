@@ -56,7 +56,18 @@ app.get("/bruxos/:id", (req, res) =>{
     res.status(200).json(bruxo)
   }else{
     res.status(404).json({
-    mensagem: "Bruxo não encontrado"});
+    mensagem: "Bruxo não encontrado com esse id por favor pesquise um nome existente!"});
+  }
+});
+
+app.get("/bruxos/vivos/nao", (req, res)=>{
+  const resultado = bruxos.filter((b) => !b.status);
+
+  if(resultado){
+    res.status(200).json(resultado)
+  }else{
+    res.status(404).json({ erro: "Nenhum bruxo morto foi encontrado!"
+    })
   }
 });
 

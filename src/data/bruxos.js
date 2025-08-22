@@ -8,6 +8,7 @@ export default [
         mascote: "Coruja (Edwiges)",
         patrono: "Cervo",
         especialidade: "Sobreviver a Voldemort 😎",
+        status: true
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ export default [
         mascote: "Gato (Bichento)",
         patrono: "Lontra",
         especialidade: "Saber tudo de tudo",
+        status: true
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ export default [
         mascote: "Rato (Perebas)",
         patrono: "Terrier Jack Russell",
         especialidade: "Xadrez Bruxo",
+        status: true
     },
     {
         id: 4,
@@ -38,6 +41,7 @@ export default [
         mascote: "Coruja (não nomeada)",
         patrono: "Desconhecido",
         especialidade: "Ser irritante",
+        status: true
     },
     {
         id: 5,
@@ -48,6 +52,7 @@ export default [
         mascote: "Nenhum",
         patrono: "Lebre",
         especialidade: "Ver criaturas imaginárias (ou não) 👻",
+        status: true
     },
     {
         id: 6,
@@ -58,6 +63,7 @@ export default [
         mascote: "Pastor alemão",
         patrono: "coruja",
         especialidade: "Herbologia avançada",
+        status: true
     },
     {
         id: 7,
@@ -68,6 +74,7 @@ export default [
         mascote: "Nenhum",
         patrono: "Doberman",
         especialidade: "Quadribol (Apanhador)",
+        status: false
     },
     {
         id: 8,
@@ -78,6 +85,7 @@ export default [
         mascote: "Nenhum",
         patrono: "Gato",
         especialidade: "Artes das Trevas",
+        status: true
     },
     {
         id: 9,
@@ -88,6 +96,7 @@ export default [
         mascote: "Nenhum",
         patrono: "Labrador",
         especialidade: "Conversar com animais",
+        status: true
     },
     {
         id: 10,
@@ -98,6 +107,7 @@ export default [
         mascote: "Nenhum",
         patrono: "Aranha Viuva Negra",
         especialidade: "Venenos",
+        status: true
     },
     {
         "id": 11,
@@ -108,6 +118,7 @@ export default [
         "mascote": "Nenhum",
         "patrono": "Cervo",
         "especialidade": "Coragem e justiça",
+        "status": false
     },
     {
         "id": 12,
@@ -118,6 +129,7 @@ export default [
         "mascote": "Nenhum",
         "patrono": "Cisne",
         "especialidade": "Quadribol (Artilheira)",
+        "status": true
     },
     {
         "id": 13,
@@ -128,6 +140,7 @@ export default [
         "mascote": "Corvo",
         "patrono": "Cervo",
         "especialidade": "Poções e Proteção contra as Artes das Trevas",
+        "status": false
     },
     {
         "id": 14,
@@ -138,6 +151,7 @@ export default [
         "mascote": "Sapo (Trevor)",
         "patrono": "Leão",
         "especialidade": "Herbologia e coragem inesperada",
+        "status": true
     },
     {
         "id": 15,
@@ -148,5 +162,6 @@ export default [
         "mascote": "Nenhum",
         "patrono": "Cavalo",
         "especialidade": "Quadribol (Goleira) e feitiçaria em combate",
+        "status": true
     }
 ];
