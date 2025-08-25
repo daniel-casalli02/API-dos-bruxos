@@ -1,7 +1,7 @@
 import express from "express";
-import bruxos from "./src/data/bruxos.js";
+import dados from "./src/data/dados.js";
 
-
+const { casas, bruxos, varinhas, pocoes, animais} = dados;
 const serverPort = 3000;
 const app = express();
 
@@ -71,6 +71,87 @@ app.get("/bruxos/vivos/nao", (req, res)=>{
   }
 });
 
+app.get("/animais", (req, res) =>{
+  if(animais.length > 0){
+    res.status(200).json(animais);
+  }else{
+    res.status(404).json({
+      mensagem:"Nenhum animais encontrado"
+    })
+  }
+});
+app.get("/pocoes", (req, res) =>{
+  if(pocoes.length > 0){
+    res.status(200).json(pocoes);
+  }else{
+    res.status(404).json({
+      mensagem:"Nenhuma poção encontrada"
+    })
+  }
+});
+app.get("/varinhas", (req, res) =>{
+  if(varinhas.length > 0){
+    res.status(200).json(varinhas);
+  }else{
+    res.status(404).json({
+      mensagem:"Nenhuma varinha encontrada"
+    })
+  }
+});
+app.get("/casas", (req, res) =>{
+  if(casas.length > 0){
+    res.status(200).json(casas);
+  }else{
+    res.status(404).json({
+      mensagem:"Nenhuma casa encontrada"
+    })
+  }
+});
+
+app.get("/animais/:id", (req, res) =>{
+  let id = parseInt(req.params.id);
+  const anima = animais.find(a => a.id === id);
+
+  if(anima){
+    res.status(200).json(anima)
+  }else{
+    res.status(404).json({
+    mensagem: "Animal não encontrado com esse id "});
+  }
+});
+app.get("/casas/:id", (req, res) =>{
+  let id = parseInt(req.params.id);
+  const casa = casas.find(c => c.id === id);
+
+  if(casa){
+    res.status(200).json(casa)
+  }else{
+    res.status(404).json({
+    mensagem: "Casa não encontrada com esse id "});
+  }
+});
+app.get("/pocoes/:id", (req, res) =>{
+  let id = parseInt(req.params.id);
+  const pocao = pocoes.find(p => p.id === id);
+
+  if(pocao){
+    res.status(200).json(pocao)
+  }else{
+    res.status(404).json({
+    mensagem: "Poção não encontrada com esse id "});
+  }
+});
+app.get("/varinhas/:id", (req, res) =>{
+  let id = parseInt(req.params.id);
+  const vara = varinhas.find(v => v.id === id);
+
+  if(vara){
+    res.status(200).json(vara)
+  }else{
+    res.status(404).json({
+    mensagem: "Varinha não encontrada com esse id "});
+  }
+});
 // Rota das casas
 app.get('/casas', (req, res) => {
   res.json({
